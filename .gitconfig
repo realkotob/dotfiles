@@ -1,0 +1,8 @@
+[alias]
+	up = pull --rebase
+	sync = "!f() { git pull --rebase && git push && echo \"Sync complete\"; }; f"
+	finish = "!f() { git add . && git commit -m \"$1\" && git sync; }; f"
+	hardreset = "!f() { git reset --hard; }; f"
+[core]
+	autocrlf = true
+	editor = vim
