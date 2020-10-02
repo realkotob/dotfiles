@@ -1,0 +1,2 @@
+--all-subs --add-metadata --embed-subs --output '~/youtube-dl/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' 
+ 
