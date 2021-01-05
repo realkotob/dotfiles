@@ -9,4 +9,10 @@ alias vi=nvim
 alias arrr='sudo protonvpn c --p2p'
 alias usa='sudo protonvpn c US-GA#14'
 
+function ssf
+    ssh $argv -t 'fish'
+end
+
+funcsave ssf
+
 starship init fish | source
