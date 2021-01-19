@@ -1,0 +1,241 @@
+{
+    "GodotTools.editorPath": "D:\\Software\\Git\\godot\\bin\\godot.windows.tools.exe",
+    "GodotTools.completeNodePath": true,
+    "GodotTools.workspaceDocumentWithMarkdown": true,
+    "editor.minimap.enabled": false,
+    "files.eol": "\n",
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/*.import": true,
+        "**/*.meta": true
+    },
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 1,
+    "search.exclude": {
+        "**/*.meta": true
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "todo-tree.general.tags": [
+        "TODO",
+        "LOCALE",
+        "ANALYTICS",
+        "FIXME",
+        "WARNING",
+        "NOTE",
+        "TEST"
+    ],
+    "todo-tree.highlights.defaultHighlight": {
+        // "icon": "alert",
+        "type": "text-and-comment",
+        "foreground": "white",
+        // "background": "white",
+        // "opacity": 50,
+        "iconColour": "white"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "verified",
+            "foreground": "green",
+            "iconColour": "green"
+            // "type": "line"
+        },
+        "LOCALE": {
+            "icon": "text-size",
+            "foreground": "#FF69B4",
+            "iconColour": "#FF69B4"
+            // "type": "line"
+        },
+        "ANALYTICS": {
+            "icon": "radio-tower",
+            "foreground": "#ADD8E6",
+            "iconColour": "#ADD8E6"
+            // "type": "line"
+        },
+        "WARNING": {
+            "foreground": "#DAA520",
+            "iconColour": "#DAA520",
+            "icon": "alert",
+        },
+        "FIXME": {
+            "foreground": "red",
+            "iconColour": "red",
+            "icon": "flame",
+        },
+        "NOTE": {
+            "iconColour": "pink",
+            "icon": "note",
+            "foreground": "pink",
+            // "background": "white",
+        },
+        "TEST": {
+            "iconColour": "orange",
+            "icon": "unverified",
+            "foreground": "orange",
+            // "background": "white",
+        }
+    },
+    "todo-tree.tree.flat": true,
+    "todo-tree.tree.hideIconsWhenGroupedByTag": true,
+    "todo-tree.regex.regex": "((//|#|<!--|-- |;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+    "lua.format.lineWidth": 160,
+    "todo-tree.filtering.excludeGlobs": [
+        "**/*creator.d.ts"
+    ],
+    "terminal.integrated.rendererType": "dom",
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "csharpfixformat.style.spaces.beforeParenthesis": false,
+    "omnisharp.useGlobalMono": "always",
+    "codemetrics.basics.ComplexityLevelNormal": 10,
+    "codemetrics.basics.ComplexityLevelHigh": 20,
+    "codemetrics.basics.ComplexityLevelExtreme": 35,
+    "task.autoDetect": "off",
+    "editor.fontFamily": "JetBrains Mono",
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.minimap.size": "fill",
+    "[gdscript]": {},
+    "csharp.referencesCodeLens.enabled": false,
+    "godot_tools.editor_path": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "workbench.editor.titleScrollbarSizing": "large",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "trixnz.vscode-lua"
+    },
+    "[txt]": {
+        "editor.wordWrap": "on"
+    },
+    "files.associations": {},
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
+    },
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "-NoLogo"
+    ],
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Default Light+",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "standard.autoFixOnSave": true,
+    "standard.engine": "semistandard",
+    "editor.tabSize": 2,
+    "clang-format.language.javascript.enable": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "[typescript]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "matklad.rust-analyzer"
+    },
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    // "vim.normalModeKeyBindingsNonRecursive": [
+    //     {
+    //         "before": [
+    //             "<leader>",
+    //             "d"
+    //         ],
+    //         "after": [
+    //             "d",
+    //             "d"
+    //         ]
+    //     },
+    //     {
+    //         "before": [
+    //             "<C-n>"
+    //         ],
+    //         "commands": [
+    //             ":nohl"
+    //         ]
+    //     }
+    // ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.blame.ignoreWhitespace": true,
+    "gitlens.views.repositories.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "gitlens.defaultDateFormat": null,
+    "gitlens.menus": {
+        "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "history": false,
+            "remote": false
+        },
+        "editorGroup": false,
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "scm": {
+            "authors": true
+        },
+        "scmGroupInline": {
+            "stash": true
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true
+        },
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": false,
+            "stash": true
+        }
+    },
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line"
+}
