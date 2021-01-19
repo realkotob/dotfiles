@@ -1,0 +1,97 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+k s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "-workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "-workbench.action.files.saveAll"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "f12",
+        "command": "references-view.find",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.find",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "editor.action.referenceSearch.trigger",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.referenceSearch.trigger",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f11",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+alt+f11",
+        "command": "workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "f11",
+        "command": "-workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "ctrl+r r",
+        "command": "-npm-script.rerun-last-script"
+    },
+    {
+        "key": "ctrl+r shift+r",
+        "command": "-npm-script.run"
+    },
+    {
+        "key": "ctrl+r t",
+        "command": "-npm-script.test"
+    },
+    {
+        "key": "ctrl+r l",
+        "command": "-npm-script.showOutput"
+    },
+    {
+        "key": "ctrl+r shift+x",
+        "command": "-npm-script.terminate-script"
+    },
+    {
+        "key": "ctrl+r ctrl+t",
+        "command": "-dotnet.test.debugTestsInContext",
+        "when": "editorTextFocus && editorLangId == 'csharp'"
+    },
+    {
+        "key": "ctrl+r t",
+        "command": "-dotnet.test.runTestsInContext",
+        "when": "editorTextFocus && editorLangId == 'csharp'"
+    }
+]
