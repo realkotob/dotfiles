@@ -49,9 +49,12 @@ return
 If DoubleAlt
 {
     MouseGetPos,,,KDE_id
-    ; This message is mostly equivalent to WinMinimize,
-    ; but it avoids a bug with PSPad.
-    PostMessage,0x112,0xf020,,,ahk_id %KDE_id%
+    ; Toggle between maximized and restored state.
+    WinGet,KDE_Win,MinMax,ahk_id %KDE_id%
+    If KDE_Win
+        WinRestore,ahk_id %KDE_id%
+    Else
+        WinMaximize,ahk_id %KDE_id%
     DoubleAlt := false
     return
 }
@@ -80,15 +83,13 @@ return
 !RButton::
 If DoubleAlt
 {
-    MouseGetPos,,,KDE_id
-    ; Toggle between maximized and restored state.
-    WinGet,KDE_Win,MinMax,ahk_id %KDE_id%
-    If KDE_Win
-        WinRestore,ahk_id %KDE_id%
-    Else
-        WinMaximize,ahk_id %KDE_id%
+      MouseGetPos,,,KDE_id
+    ; This message is mostly equivalent to WinMinimize,
+    ; but it avoids a bug with PSPad.
+    PostMessage,0x112,0xf020,,,ahk_id %KDE_id%
     DoubleAlt := false
     return
+  
 }
 ; Get the initial mouse position and window id, and
 ; abort if the window is maximized.
