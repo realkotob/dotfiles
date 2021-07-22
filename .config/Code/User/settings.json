@@ -93,12 +93,12 @@
     "codemetrics.basics.ComplexityLevelHigh": 20,
     "codemetrics.basics.ComplexityLevelExtreme": 35,
     "task.autoDetect": "off",
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
     "todo-tree.tree.showScanModeButton": false,
     "editor.minimap.size": "fill",
     "[gdscript]": {},
     "csharp.referencesCodeLens.enabled": false,
-    "godot_tools.editor_path": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "godot_tools.editor_path": "C:\\Users\\asher\\scoop\\apps\\godot\\current\\godot.exe",
     "workbench.editor.titleScrollbarSizing": "large",
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
@@ -118,7 +118,7 @@
         "-NoLogo"
     ],
     "editor.fontLigatures": true,
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Quiet Light",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
@@ -138,12 +138,9 @@
         "editor.defaultFormatter": "matklad.rust-analyzer"
     },
     "rust-analyzer.checkOnSave.command": "clippy",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
