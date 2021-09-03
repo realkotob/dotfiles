@@ -1,7 +1,6 @@
 {
-    "GodotTools.editorPath": "D:\\Software\\Git\\godot\\bin\\godot.windows.tools.exe",
-    "GodotTools.completeNodePath": true,
-    "GodotTools.workspaceDocumentWithMarkdown": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.preview": true,
     "editor.minimap.enabled": false,
     "files.eol": "\n",
     "files.autoSave": "afterDelay",
@@ -10,7 +9,6 @@
         "**/*.meta": true
     },
     "explorer.confirmDelete": false,
-    "window.zoomLevel": 1,
     "search.exclude": {
         "**/*.meta": true
     },
@@ -113,7 +111,7 @@
     "editor.semanticTokenColorCustomizations": {
         "enabled": true
     },
-    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.shellArgs.windows": [
         "-NoLogo"
     ],
@@ -183,15 +181,13 @@
         "<C-f>": false
     },
     "[json]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[html]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
     "explorer.confirmDragAndDrop": false,
     "gitlens.blame.ignoreWhitespace": true,
-    "gitlens.views.repositories.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
     "gitlens.defaultDateFormat": null,
     "gitlens.menus": {
         "editor": {
@@ -235,5 +231,22 @@
     },
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
-    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "mjohns.clang-format"
+    },
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "manual",
+    "[jsonc]": {
+        "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+    },
+    "window.zoomLevel": 1,
+    "security.workspace.trust.untrustedFiles": "open"
 }
