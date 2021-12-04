@@ -1,7 +1,24 @@
 {
+    "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+    "editor.minimap.size": "fill",
     "editor.bracketPairColorization.enabled": true,
     "editor.suggest.preview": true,
     "editor.minimap.enabled": false,
+    "editor.guides.bracketPairs": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true, 
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
+    },
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": false
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
     "files.eol": "\n",
     "files.autoSave": "afterDelay",
     "files.exclude": {
@@ -12,9 +29,6 @@
     "search.exclude": {
         "**/*.meta": true
     },
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
     "git.confirmSync": false,
     "git.autofetch": true,
     "todo-tree.general.tags": [
@@ -84,16 +98,13 @@
         "**/*creator.d.ts"
     ],
     "terminal.integrated.rendererType": "dom",
-    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
     "csharpfixformat.style.spaces.beforeParenthesis": false,
     "omnisharp.useGlobalMono": "always",
     "codemetrics.basics.ComplexityLevelNormal": 10,
     "codemetrics.basics.ComplexityLevelHigh": 20,
     "codemetrics.basics.ComplexityLevelExtreme": 35,
     "task.autoDetect": "off",
-    "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
     "todo-tree.tree.showScanModeButton": false,
-    "editor.minimap.size": "fill",
     "[gdscript]": {},
     "csharp.referencesCodeLens.enabled": false,
     "godot_tools.editor_path": "C:\\Users\\asher\\scoop\\apps\\godot\\current\\godot.exe",
@@ -108,27 +119,16 @@
         "editor.wordWrap": "on"
     },
     "files.associations": {},
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true
-    },
-    // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.shellArgs.windows": [
         "-NoLogo"
     ],
-    "editor.fontLigatures": true,
     "workbench.colorTheme": "Quiet Light",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "standard.autoFixOnSave": true,
     "standard.engine": "semistandard",
-    "editor.tabSize": 2,
     "clang-format.language.javascript.enable": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.acceptSuggestionOnEnter": "smart",
     "[typescript]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
@@ -235,7 +235,7 @@
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
-        "yaml": false,
+        "yaml": true,
         "plaintext": true,
         "markdown": false
     },
@@ -247,6 +247,24 @@
     "[jsonc]": {
         "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
     },
-    "window.zoomLevel": 1,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editor.untitled.hint": "hidden",
+    "dart.flutterSdkPath": "C:\\Users\\asher\\scoop\\apps\\flutter\\2.5.3",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "rust-analyzer.lens.methodReferences": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+    },
+    "window.zoomLevel": 1
 }
