@@ -1,5 +1,8 @@
 {
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Quiet Light",
     "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+    "editor.codeLensFontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
     "editor.minimap.size": "fill",
     "editor.bracketPairColorization.enabled": true,
     "editor.suggest.preview": true,
@@ -7,7 +10,7 @@
     "editor.guides.bracketPairs": true,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "editor.formatOnType": true, 
+    "editor.formatOnType": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.semanticTokenColorCustomizations": {
         "enabled": true
@@ -56,13 +59,13 @@
             // "type": "line"
         },
         "LOCALE": {
-            "icon": "text-size",
+            // "icon": "$(text-size)",
             "foreground": "#FF69B4",
             "iconColour": "#FF69B4"
             // "type": "line"
         },
         "ANALYTICS": {
-            "icon": "radio-tower",
+            // "icon": "radio-tower",
             "foreground": "#ADD8E6",
             "iconColour": "#ADD8E6"
             // "type": "line"
@@ -122,7 +125,6 @@
     "terminal.integrated.shellArgs.windows": [
         "-NoLogo"
     ],
-    "workbench.colorTheme": "Quiet Light",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
@@ -130,7 +132,7 @@
     "standard.engine": "semistandard",
     "clang-format.language.javascript.enable": false,
     "[typescript]": {
-        "editor.defaultFormatter": "xaver.clang-format"
+        "editor.defaultFormatter": "mjohns.clang-format"
     },
     "[rust]": {
         "editor.defaultFormatter": "matklad.rust-analyzer"
@@ -237,7 +239,7 @@
         "*": true,
         "yaml": true,
         "plaintext": true,
-        "markdown": false
+        "markdown": true
     },
     "[csharp]": {
         "editor.defaultFormatter": "mjohns.clang-format"
@@ -245,7 +247,7 @@
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "manual",
     "[jsonc]": {
-        "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.editor.untitled.hint": "hidden",
@@ -266,5 +268,5 @@
     "[markdown]": {
         "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
     },
-    "window.zoomLevel": 1
+    "window.zoomLevel": 2
 }
