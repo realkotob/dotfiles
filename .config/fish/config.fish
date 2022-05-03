@@ -9,6 +9,19 @@ alias vi=nvim
 alias arrr='sudo protonvpn c --p2p'
 alias usa='sudo protonvpn c US-GA#14'
 
+# View more here https://gist.github.com/realkotob/10f7126d08bf626a16ac3154eccfe652
+alias g='git'
+alias gst='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gl='git pull'
+alias gup='git pull --rebase'
+alias gp='git push'
+alias gd='git diff'
+
+
+
+
 function ssf
     ssh $argv -t 'fish'
 end
