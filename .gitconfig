@@ -2,9 +2,9 @@
 	up = pull --rebase
 	sync = "!f() { git pull --rebase && git push && echo \"Sync complete\"; }; f"
 	finish = "!f() { git add . && git commit -m \"$1\" && git sync; }; f"
-	feat = "!f() { git add . && git commit -m \"feat:$1\" && git sync; }; f"
-	fix = "!f() { git add . && git commit -m \"fix:$1\" && git sync; }; f"
-	chore = "!f() { git add . && git commit -m \"chore:$1\" && git sync; }; f"
+	feat = "!f() { git add . && git commit -m \"feat: $1\" && git sync; }; f"
+	fix = "!f() { git add . && git commit -m \"fix: $1\" && git sync; }; f"
+	chore = "!f() { git add . && git commit -m \"chore: $1\" && git sync; }; f"
 	hardreset = reset --hard
 [core]
 	autocrlf = true
