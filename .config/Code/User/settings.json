@@ -268,5 +268,7 @@
     "[markdown]": {
         "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
     },
-    "window.zoomLevel": 2
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Quiet Light",
+    "omnisharp.useModernNet": false
 }
