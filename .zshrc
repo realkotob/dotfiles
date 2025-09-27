@@ -107,7 +107,34 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# Old way for loading NVM, this loads it at every shell start
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh
+
+
+# Set NVM_DIR
+export NVM_DIR="${XDG_CONFIG_HOME:-$HOME/.nvm}"
+
+# Define a function to load NVM only when needed
+load-nvm() {
+  unset -f nvm node npm npx # prevent recursion
+
+  # Load nvm
+  if [ -s "$NVM_DIR/nvm.sh" ]; then
+    source "$NVM_DIR/nvm.sh"
+  elif [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
+    source "$(brew --prefix nvm)/nvm.sh"
+  fi
+}
+
+# Lazy-load nvm when any of these commands are used
+for cmd in nvm node npm npx; do
+  eval "
+    $cmd() {
+      load-nvm
+      $cmd \"\$@\"
+    }
+  "
+done
