@@ -117,7 +117,6 @@ alias vim='nvim'
 
 # source $(brew --prefix nvm)/nvm.sh
 
-
 # Set NVM_DIR
 export NVM_DIR="${XDG_CONFIG_HOME:-$HOME/.nvm}"
 
@@ -125,11 +124,18 @@ export NVM_DIR="${XDG_CONFIG_HOME:-$HOME/.nvm}"
 load-nvm() {
   unset -f nvm node npm npx # prevent recursion
 
-  # Load nvm
+  # Load nvm (from $NVM_DIR or Homebrew)
   if [ -s "$NVM_DIR/nvm.sh" ]; then
-    source "$NVM_DIR/nvm.sh"
-  elif [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
-    source "$(brew --prefix nvm)/nvm.sh"
+    \. "$NVM_DIR/nvm.sh"
+  elif command -v brew >/dev/null 2>&1 && [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
+    \. "$(brew --prefix nvm)/nvm.sh"
+  fi
+
+  # Load bash completion (from $NVM_DIR or Homebrew)
+  if [ -s "$NVM_DIR/bash_completion" ]; then
+    \. "$NVM_DIR/bash_completion"
+  elif command -v brew >/dev/null 2>&1 && [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ]; then
+    \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
   fi
 }
 
@@ -142,3 +148,4 @@ for cmd in nvm node npm npx; do
     }
   "
 done
+
