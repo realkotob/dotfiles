@@ -1,6 +1,10 @@
 # Install first with `brew install zsh-autocomplete`
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+# Add history settings
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
