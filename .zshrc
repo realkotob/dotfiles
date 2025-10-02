@@ -154,3 +154,7 @@ for cmd in nvm node npm npx; do
   "
 done
 
+# Cycle all history when pressing up instead of getting stuck 
+bindkey '^[OA' up-line-or-history  # For some terminals
+bindkey '^[[A' up-line-or-history # For other terminals
+
