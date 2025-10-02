@@ -127,7 +127,7 @@ export NVM_DIR="${XDG_CONFIG_HOME:-$HOME/.nvm}"
 
 # Define a function to load NVM only when needed
 load-nvm() {
-  unset -f nvm node npm npx # prevent recursion
+  unset -f nvm node npm npx pm2 # prevent recursion
 
   # Load nvm (from $NVM_DIR or Homebrew)
   if [ -s "$NVM_DIR/nvm.sh" ]; then
@@ -145,7 +145,7 @@ load-nvm() {
 }
 
 # Lazy-load nvm when any of these commands are used
-for cmd in nvm node npm npx; do
+for cmd in nvm node npm npx pm2; do
   eval "
     $cmd() {
       load-nvm
