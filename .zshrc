@@ -154,7 +154,9 @@ for cmd in nvm node npm npx pm2; do
   "
 done
 
-# Cycle all history when pressing up instead of getting stuck 
+# Cycle all history when pressing up and down keys instead of getting stuck 
 bindkey '^[OA' up-line-or-history  # For some terminals
 bindkey '^[[A' up-line-or-history # For other terminals
+bindkey '^[OB' down-line-or-history # For some terminals
+bindkey '^[[B' down-line-or-history # For other terminals
 
