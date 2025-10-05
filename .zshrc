@@ -4,7 +4,7 @@ source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # Add history settings
 HISTSIZE=1000000       # Set the amount of lines you want saved
 SAVEHIST=1000000       # This is required to actually save them, needs to match with HISTSIZE
-HISTFILE=~/.zhistory   # Save them on this file
+#HISTFILE=~/.zhistory   # Save them on this file
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
@@ -16,7 +16,6 @@ setopt HIST_IGNORE_SPACE         # Don\'t record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don\'t write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY
-
 
 # Create an alias for searching history
 alias hg='history | grep'
