@@ -1,24 +1,6 @@
 # Install first with `brew install zsh-autocomplete`
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# Add history settings
-HISTSIZE=1000000       # Set the amount of lines you want saved
-SAVEHIST=1000000       # This is required to actually save them, needs to match with HISTSIZE
-#HISTFILE=~/.zhistory   # Save them on this file
-setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
-setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
-setopt HIST_IGNORE_DUPS          # Don\'t record an entry that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
-setopt HIST_IGNORE_SPACE         # Don\'t record an entry starting with a space.
-setopt HIST_SAVE_NO_DUPS         # Don\'t write duplicate entries in the history file.
-setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
-setopt HIST_VERIFY
-
-# Create an alias for searching history
-alias hg='history | grep'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -135,30 +117,24 @@ alias vim='nvim'
 
 # source $(brew --prefix nvm)/nvm.sh
 
+
 # Set NVM_DIR
 export NVM_DIR="${XDG_CONFIG_HOME:-$HOME/.nvm}"
 
 # Define a function to load NVM only when needed
 load-nvm() {
-  unset -f nvm node npm npx pm2 # prevent recursion
+  unset -f nvm node npm npx # prevent recursion
 
-  # Load nvm (from $NVM_DIR or Homebrew)
+  # Load nvm
   if [ -s "$NVM_DIR/nvm.sh" ]; then
-    \. "$NVM_DIR/nvm.sh"
-  elif command -v brew >/dev/null 2>&1 && [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
-    \. "$(brew --prefix nvm)/nvm.sh"
-  fi
-
-  # Load bash completion (from $NVM_DIR or Homebrew)
-  if [ -s "$NVM_DIR/bash_completion" ]; then
-    \. "$NVM_DIR/bash_completion"
-  elif command -v brew >/dev/null 2>&1 && [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ]; then
-    \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
+    source "$NVM_DIR/nvm.sh"
+  elif [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
+    source "$(brew --prefix nvm)/nvm.sh"
   fi
 }
 
 # Lazy-load nvm when any of these commands are used
-for cmd in nvm node npm npx pm2; do
+for cmd in nvm node npm npx; do
   eval "
     $cmd() {
       load-nvm
@@ -167,9 +143,46 @@ for cmd in nvm node npm npx pm2; do
   "
 done
 
-# Cycle all history when pressing up and down keys instead of getting stuck 
-bindkey '^[OA' up-line-or-history  # For some terminals
-bindkey '^[[A' up-line-or-history # For other terminals
-bindkey '^[OB' down-line-or-history # For some terminals
-bindkey '^[[B' down-line-or-history # For other terminals
+# This gives you better history searching
+# Add history settings
+HISTSIZE=1000000       # Set the amount of lines you want saved
+SAVEHIST=1000000       # This is required to actually save them, needs to match with HISTSIZE
+#HISTFILE=~/.zhistory   # Save them on this file
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don\'t record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don\'t record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don\'t write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY
 
+# Create an alias for searching history
+alias hg='history | grep'
+
+
+# Cycle all history when pressing up and down keys instead of getting stuck 
+# bindkey '^[OA' up-line-or-history  # For some terminals
+# bindkey '^[[A' up-line-or-history # For other terminals
+# bindkey '^[OB' down-line-or-history # For some terminals
+# bindkey '^[[B' down-line-or-history # For other terminals
+
+
+# export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+# zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+# source <(carapace _carapace)
+
+# brew install starship
+eval "$(starship init zsh)"
+
+# brew install fzf
+source <(fzf --zsh)
+
+# brew install zoxide
+eval "$(zoxide init zsh)"
+
+# brew install atuin
+eval "$(atuin init zsh)"
